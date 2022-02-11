@@ -16,6 +16,7 @@ const LOG_EVENT_BONUS_LIFE = 'BONUS_LIFE';
 
 let battleLog = [];
 let lastLoggedEntry;
+let chosenMaxLife;
 
 function getMaxLifeValues() {
   const enteredValue = prompt('Enter the maximun life for you and the monster: ', '100')
@@ -30,7 +31,7 @@ function getMaxLifeValues() {
 }
 
 try {
-  let chosenMaxLife = getMaxLifeValues();
+   chosenMaxLife = getMaxLifeValues();
 } catch (error) {
   console.log(error);
   chosenMaxLife = 100;
